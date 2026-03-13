@@ -767,6 +767,114 @@
             font-weight: 700;
         }
 
+        /* ============================================
+           ARTICLE IMAGES
+           ============================================ */
+        .article-img {
+            width: 100%;
+            border-radius: 10px;
+            margin: 28px 0;
+            display: block;
+        }
+
+        .article-img-caption {
+            font-family: var(--font-ui);
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: -20px;
+            margin-bottom: 28px;
+            font-style: italic;
+        }
+
+        .hero-img-wrapper {
+            margin: 28px 0 0;
+            text-align: center;
+        }
+
+        .hero-img-wrapper img {
+            max-width: 340px;
+            width: 100%;
+            border-radius: 10px;
+            filter: drop-shadow(0 8px 24px rgba(0,0,0,0.12));
+        }
+
+        .product-feature-img {
+            background: var(--bg-cream);
+            border-radius: 14px;
+            padding: 32px;
+            margin: 32px 0;
+            text-align: center;
+        }
+
+        .product-feature-img img {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .product-feature-img .img-caption {
+            font-family: var(--font-ui);
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 14px;
+        }
+
+        .ingredient-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .benefit-img-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .benefit-img-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .benefit-img-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .benefit-img-card .benefit-label {
+            padding: 14px 16px;
+            font-family: var(--font-ui);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefit-img-card img {
+                height: 200px;
+            }
+
+            .hero-img-wrapper img {
+                max-width: 260px;
+            }
+        }
+
         .cta-subtext {
             font-family: var(--font-ui);
             font-size: 12px;
@@ -1061,7 +1169,7 @@
     <header class="header" id="siteHeader">
         <div class="header-inner">
             <a href="https://sale.tryvitaorganics.com/last-chance" class="logo-text">
-                <span class="logo-leaf">&#127807;</span> Vita Organics
+                <img src="https://img.funnelish.com/2077/27447/1654663786-vita%20organics.png" alt="Vita Organics" style="height: 32px; width: auto;">
             </a>
             <a href="https://sale.tryvitaorganics.com/last-chance" class="header-cta">Get Up to 62% Off</a>
         </div>
@@ -1073,6 +1181,9 @@
             <span class="category-tag">Health &amp; Wellness</span>
             <h1>Retired Nurse Discovers New Natural Compound That Targets Joint Pain at Its Source</h1>
             <p class="hero-subtitle">A high-absorption turmeric formula with a patented black pepper extract is helping over 82,000 Americans ditch the painkillers and reclaim their mobility. Here is what the research shows.</p>
+            <div class="hero-img-wrapper reveal">
+                <img src="https://img.funnelish.com/2077/27447/1654639729-IMG_4709-min.jpeg" alt="Vita Organics Turmeric Curcumin bottle" loading="eager">
+            </div>
             <a href="https://sale.tryvitaorganics.com/last-chance" class="cta-button hero-cta">See If You Qualify for 62% Off</a>
             <div class="byline">
                 <div class="byline-avatar">VO</div>
@@ -1098,6 +1209,26 @@
             <p class="reveal">"Within 2 weeks I started to feel relief," Barbara says. "By the first month I had almost no pain at all."</p>
 
             <p class="reveal">Barbara is not alone. Over <strong>200,000 bottles</strong> of this formula have been sold to date, and the reviews keep piling up.</p>
+
+            <!-- BENEFITS VISUAL GRID -->
+            <div class="benefits-grid reveal">
+                <div class="benefit-img-card">
+                    <img src="https://img.funnelish.com/2077/29318/1751959387-ChatGPT%20Image%20Jul%208%2C%202025%2C%2005_22_52%20PM.png" alt="Fights inflammation naturally" loading="lazy">
+                    <div class="benefit-label">Fights Inflammation</div>
+                </div>
+                <div class="benefit-img-card">
+                    <img src="https://img.funnelish.com/2077/29318/1751959073-ChatGPT%20Image%20Jul%208%2C%202025%2C%2005_05_58%20PM.png" alt="Natural pain relief without prescriptions" loading="lazy">
+                    <div class="benefit-label">Natural Pain Relief</div>
+                </div>
+                <div class="benefit-img-card">
+                    <img src="https://img.funnelish.com/2077/29318/1751959075-ChatGPT%20Image%20Jul%208%2C%202025%2C%2005_10_27%20PM.png" alt="Improved joint mobility and flexibility" loading="lazy">
+                    <div class="benefit-label">Restores Mobility</div>
+                </div>
+                <div class="benefit-img-card">
+                    <img src="https://img.funnelish.com/2077/29318/1751959718-ChatGPT%20Image%20Jul%208%2C%202025%2C%2005_28_06%20PM.png" alt="Protects and rebuilds cartilage" loading="lazy">
+                    <div class="benefit-label">Protects Cartilage</div>
+                </div>
+            </div>
 
             <!-- STAT ROW -->
             <div class="stat-row reveal">
@@ -1142,21 +1273,31 @@
 
             <p class="reveal">This is the exact mechanism behind <strong>Vita Organics Turmeric Curcumin</strong>, a formula that combines 1,315mg of turmeric curcumin with patented BioPerine in every serving.</p>
 
+            <!-- FLOATING INGREDIENTS PRODUCT SHOT -->
+            <div class="product-feature-img reveal">
+                <img src="https://img.funnelish.com/2077/27447/1654655602-Floating-Ingredients-Bottle-min.png" alt="Vita Organics Turmeric Curcumin with floating natural ingredients" loading="lazy">
+                <div class="img-caption">1,315mg Turmeric Curcumin + Patented BioPerine in every serving</div>
+            </div>
+
             <!-- INGREDIENT CARDS -->
             <div class="ingredient-cards reveal">
                 <div class="ingredient-card">
-                    <div class="ingredient-icon">&#127805;</div>
+                    <img src="https://img.funnelish.com/2077/29318/1751960773-ChatGPT%20Image%20Jul%208%2C%202025%2C%2005_44_45%20PM.png" alt="Turmeric Curcumin ingredient" loading="lazy">
                     <h4>Turmeric Curcumin</h4>
                     <div class="dose">1,315mg per serving</div>
                     <p>Clinically studied for its powerful anti-inflammatory and antioxidant properties</p>
                 </div>
                 <div class="ingredient-card">
-                    <div class="ingredient-icon">&#127798;</div>
+                    <img src="https://img.funnelish.com/2077/29318/1751960583-ChatGPT%20Image%20Jul%208%2C%202025%2C%2005_42_48%20PM.png" alt="BioPerine black pepper extract" loading="lazy">
                     <h4>BioPerine (Black Pepper)</h4>
                     <div class="dose">Patented Extract</div>
                     <p>Boosts curcumin absorption by up to 2,000% for maximum effectiveness</p>
                 </div>
             </div>
+
+            <!-- PURE INGREDIENTS IMAGE -->
+            <img class="article-img reveal" src="https://img.funnelish.com/2077/29318/1751960359-ChatGPT%20Image%20Jul%208%2C%202025%2C%2005_39_08%20PM.png" alt="Pure natural ingredients used in Vita Organics formula" loading="lazy">
+            <p class="article-img-caption">Only clean, natural ingredients. No fillers, no artificial additives.</p>
 
             <!-- HOW IT WORKS -->
             <h2 class="reveal">How It Targets Pain at the Source</h2>
@@ -1184,6 +1325,9 @@
             <p class="reveal">Picture yourself 30 days from now. You wake up and swing your legs out of bed without that familiar jolt of stiffness. You walk downstairs, pour your coffee, and realize you did not think about your joints once. That is what consistent, high-absorption curcumin can feel like when it actually reaches the tissue that needs it.</p>
 
             <p class="reveal">That is the difference Barbara, Mark, Susan, and thousands of others describe. Not a miracle. Not an overnight fix. Just steady, noticeable improvement, day after day, until one morning you realize the pain you accepted as "normal" simply is not there anymore.</p>
+
+            <!-- LIFESTYLE IMAGE -->
+            <img class="article-img reveal" src="https://img.funnelish.com/2077/29318/1751960331-ChatGPT%20Image%20Jul%208%2C%202025%2C%2005_38_37%20PM.png" alt="Active adults enjoying life pain-free" loading="lazy">
 
             <!-- LOSS AVERSION -->
             <div class="loss-box reveal">
@@ -1344,6 +1488,12 @@
                         <p>Just 2 capsules daily, taken with a meal. Each bottle contains a full 30-day supply.</p>
                     </div>
                 </div>
+            </div>
+
+            <!-- PRODUCT MOCKUP -->
+            <div class="product-feature-img reveal">
+                <img src="https://img.funnelish.com/2077/27447/1654644527-MOCKUP-2-min.png" alt="Vita Organics Turmeric Curcumin 3-month supply" loading="lazy">
+                <div class="img-caption">Most popular: the 3-month supply at 37% off</div>
             </div>
 
             <!-- FINAL CTA -->
